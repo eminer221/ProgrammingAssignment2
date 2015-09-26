@@ -1,10 +1,7 @@
 ## the first function creates a special "matrix"
 ## object that can cache its inverse
 
-## the second function computes the inverse of the
-## matrix from the first function
-## if the inverse has already been calculated then 
-## it retrieves the inverse from the cache
+
 
 makeCacheMatrix <- function(x = matrix()) {
 m <- NULL
@@ -19,6 +16,11 @@ list(set=set, get=get,
      setmean=setmean,
      getmean=getmean)
 }
+
+## the second function computes the inverse of the
+## matrix from the first function
+## if the inverse has already been calculated then 
+## it retrieves the inverse from the cache
 
 cacheSolve <- function(x, ...) {
   m <-x$getmean()
